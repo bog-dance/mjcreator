@@ -42,10 +42,6 @@ def get_server_instance():
     server = Jenkins(SelfConfDict['JENKINS_URL'], username = SelfConfDict['JENKINS_USERNAME'], password = SelfConfDict['JENKINS_PASSWORD'])
     return server
 
-def dummy_jobs():
-    VuJobs = ['prod-vu220.seo-sites.24-essay-writing-service-com']
-    return VuJobs
-
 def parse_xmljob_conf():
     x = open(JOB_CONF_TEMPLATE, "r+")
     job_xml = x.read()
